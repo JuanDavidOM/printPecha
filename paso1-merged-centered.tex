@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage[final]{pdfpages}          % comment out for testing
+\usepackage[paperwidth=355.6mm, paperheight=107.9mm]{geometry}  % dimensions of 8 letter widths, 4 heights
+
+\pagestyle{plain}                     % do not use page numbering
+\begin{document}                      % orig. slide sizes are 355.6mmx215.9mm (Legal)
+  \includepdf[delta=0 0,              % horiz.+vert. distance between slides
+              scale=1,                % scale down for additional margins
+              pages=-,                % all pages on imput document
+              offset=1.195mm 0.82mm, % offset to centering content              
+              noautoscale=false,      % set to true if you have larger pages
+              frame=false]            % set to true if you want frames
+              {paso1-merged.pdf}    % filename+path cannot have spaces!
+\end{document}
